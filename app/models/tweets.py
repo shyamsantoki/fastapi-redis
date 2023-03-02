@@ -1,7 +1,6 @@
+from models import Base
+from models.users import User
 from sqlalchemy import Column, Date, ForeignKey, Integer, String
-
-from app.models import Base
-from app.models.users import User
 
 
 class Tweet(Base):
