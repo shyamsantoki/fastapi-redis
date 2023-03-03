@@ -172,5 +172,5 @@ poetry.toml
 
 
 ### Not Legacy ###
-*/versions
+*/versions/*
 .vscode
