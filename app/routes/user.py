@@ -21,7 +21,7 @@ def get_user_name(user_name, db_conn=Depends(get_db)):
         conn.expire(redis_user_name, 1 * HOUR)
     else:
         user = {
-            key.decode("ascii"): user.get(key).decode("ascii")
+            key.decode("ascii"): redis_data.get(key).decode("ascii")
             for key in redis_data.keys()
         }
         user = DisplayUser.parse_obj(user)
